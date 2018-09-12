@@ -1,7 +1,7 @@
 FROM python:3.6
 
-# RUN pip install pipenv \
-# && pipenv install --system
+RUN pip install pipenv \
+ && pipenv install --system
 
 EXPOSE 8000
 ENTRYPOINT ["python"]
