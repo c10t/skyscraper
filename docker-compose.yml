@@ -1,10 +1,20 @@
 version: "3.0"
+
 services:
   engine:
     build:
-      context: ./
-      dockerfile: engine/Dockerfile
+      context: ./engine
+      dockerfile: Dockerfile
     ports:
       - "8888:8000"
     volumes:
-      - ./engine:/home
+      - ./engine:/home/engine
+  mock:
+    build:
+      context: ./mocksite
+      dockerfile: Dockerfile
+    ports:
+      - "3232:3000"
+    volumes:
+      - "./mocksite:/app"
+      - "/app/node_modules"
