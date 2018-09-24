@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-# Scrapy settings for concept project
+# Scrapy settings for imagecrab project
 #
 # For simplicity, this file contains only settings considered important or
 # commonly used. You can find more settings consulting the documentation:
@@ -9,14 +9,14 @@
 #     https://doc.scrapy.org/en/latest/topics/downloader-middleware.html
 #     https://doc.scrapy.org/en/latest/topics/spider-middleware.html
 
-BOT_NAME = 'concept'
+BOT_NAME = 'imagecrab'
 
-SPIDER_MODULES = ['concept.spiders']
-NEWSPIDER_MODULE = 'concept.spiders'
+SPIDER_MODULES = ['imagecrab.spiders']
+NEWSPIDER_MODULE = 'imagecrab.spiders'
 
 
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
-#USER_AGENT = 'concept (+http://www.yourdomain.com)'
+#USER_AGENT = 'imagecrab (+http://www.yourdomain.com)'
 
 # Obey robots.txt rules
 ROBOTSTXT_OBEY = True
@@ -47,13 +47,13 @@ CONCURRENT_REQUESTS_PER_IP = 0
 # Enable or disable spider middlewares
 # See https://doc.scrapy.org/en/latest/topics/spider-middleware.html
 #SPIDER_MIDDLEWARES = {
-#    'concept.middlewares.ConceptSpiderMiddleware': 543,
+#    'imagecrab.middlewares.ImagecrabSpiderMiddleware': 543,
 #}
 
 # Enable or disable downloader middlewares
 # See https://doc.scrapy.org/en/latest/topics/downloader-middleware.html
 #DOWNLOADER_MIDDLEWARES = {
-#    'concept.middlewares.ConceptDownloaderMiddleware': 543,
+#    'imagecrab.middlewares.ImagecrabDownloaderMiddleware': 543,
 #}
 
 # Enable or disable extensions
@@ -65,8 +65,12 @@ CONCURRENT_REQUESTS_PER_IP = 0
 # Configure item pipelines
 # See https://doc.scrapy.org/en/latest/topics/item-pipeline.html
 ITEM_PIPELINES = {
-    'concept.pipelines.ConceptPipeline': 300,
+    'imagecrab.pipelines.ImagecrabPipeline': 300,
 }
+
+# Configure the target storage setting
+# See https://doc.scrapy.org/en/latest/topics/media-pipeline.html
+IMAGES_STORE = './resources'
 
 # Enable and configure the AutoThrottle extension (disabled by default)
 # See https://doc.scrapy.org/en/latest/topics/autothrottle.html

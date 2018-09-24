@@ -1,0 +1,12 @@
+
+# cache
+__pycache__/
+.scrapy
+
+# spiders
+imagecrab/imagecrab/spiders/*
+!__init__.py
+
+# scraped result
+resources/
+!.gitkeep
