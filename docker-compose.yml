@@ -5,6 +5,8 @@ services:
     build:
       context: ./engine
       dockerfile: Dockerfile
+    links:
+      - mock
     ports:
       - "8888:8000"
     volumes:
