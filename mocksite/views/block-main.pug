@@ -1,13 +1,15 @@
+
+- const cols = ["siimple-grid-col", "siimple-grid-col--4", "siimple-grid-col--sm-12"];
+
 div.siimple-content.siimple-content--extra-large
   div.siimple-grid
     each row in matrix
       div.siimple-grid-row
         each cell in row
-          div.siimple-grid-col
-            .siimple-grid-col--4
-            .siimple-grid-col--sm-12
+          div(class=cols)
             div.siimple-h2= cell.title
             div.siimple-paragraph= cell.description 
             div.siimple-btn.siimple-btn--primary(style="margin-bottom:15px;") More info
 
   div.siimple-rule
+  div.siimple-footer.siimple-footer--extra-large 2018 My Inc.
