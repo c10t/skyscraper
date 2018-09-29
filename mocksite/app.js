@@ -19,6 +19,9 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
+// use siimple
+app.use('/siimple', express.static(path.join(__dirname, '/node_modules/siimple/dist/')));
+
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 
