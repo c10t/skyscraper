@@ -10,3 +10,6 @@ imagecrab/imagecrab/spiders/*
 # scraped result
 resources/
 !.gitkeep
+
+# WIP
+Pipfile.lock
